@@ -72,5 +72,5 @@ function parse856Links(sirsijson){
 		}
 	});
 	console.log("Ebook URL: "+ebookUrl);
-	window.open(bookUrl , '_blank');
+	window.open(ebookUrl , '_blank');
 }
