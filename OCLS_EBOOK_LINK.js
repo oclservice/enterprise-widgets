@@ -39,7 +39,7 @@ function getEbookLink(rId){
 		collegeDropdown.id = "ebookLinkCollegeSelector";
 		for (var college in collegeNameMappings){
 			var opt = document.createElement("option");
-			opt.value = collegeNameMappings[college];
+			opt.value = college;
 			var text = document.createTextNode(collegeNameMappings[college]);
 			opt.appendChild(text);
 			collegeDropdown.appendChild(opt);
@@ -55,7 +55,12 @@ function getEbookLink(rId){
 			modal:true,
 			buttons:{
 				Done : function(){
-					get856Links(rId,this.options[this.selectedIndex].value);
+					// Set targetCollege to the selected value
+					targetCollege = this.options[this.selectedIndex].value;
+					// Update the cookie fo store this selection for future uses
+					document.cookie = "college="+targetCollege+"; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/";
+					// Get the links and redirect
+					get856Links(rId,collegeNameMappings[targetCollege]);
 					jQuery(this).dialog("close");
 					}
 				}
