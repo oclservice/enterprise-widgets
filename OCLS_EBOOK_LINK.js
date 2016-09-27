@@ -92,7 +92,8 @@ function get856Links(rId,targetCollegeName){
 	 error: function (xhr, ajaxOptions, thrownError) {
 			console.log("API status: "+xhr.status);
 			console.log("API error: "+thrownError);
-		  }
+		  },
+	 async: false
 	});//end ajax()
 }
 
@@ -122,5 +123,5 @@ function parse856Links(sirsijson,targetCollegeName){
 		}
 	});
 	console.log("Ebook URL: "+ebookUrl);
-	window.open(ebookUrl , '_blank');
+	window.open(ebookUrl);
 }
