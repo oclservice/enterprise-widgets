@@ -51,7 +51,7 @@ function getEbookLink(rId){
 			jQuery(collegeDropdown).dialog({
 			width:500,
 			maxHeight:700,
-			title:'Please choose a college',
+			title:'${CHOOSECOLLEGE}',
 			modal:true,
 			buttons:{
 				Done : function(){
@@ -103,7 +103,7 @@ function parse856Links(sirsijson,targetCollegeName){
 	console.log("API call successful");
 	
 	// Set this to true for testing
-	var OCLStestMode = true;
+	var OCLStestMode = false;
 
 	if (OCLStestMode) {
 		var urlTestSuffix='&noipcheck=true';
