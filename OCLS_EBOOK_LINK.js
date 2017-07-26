@@ -13,16 +13,13 @@ function getEbookLink(rId){
 						"geob": "George Brown College",
 						"geog": "Georgian College",
 						"humb": "Humber College",
-						"laci": "La Cité collégiale",
 						"lamb": "Lambton College",
 						"loya": "Loyalist College",
 						"moha": "Mohawk College",
 						"niag": "Niagara College",
 						"nort": "Northern College",
-						"saul": "Sault College",
 						"sene": "Seneca College",
 						"sher": "Sheridan College",
-						"stcl": "St. Clair College",
 						"stla": "St. Lawrence College"
 						};
 	try{
