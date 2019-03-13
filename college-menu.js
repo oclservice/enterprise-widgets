@@ -43,6 +43,7 @@ $J(document).ready(function(){
 	drop += "<option value='algo'>Algonquin</option>";
 	drop += "<option value='bore'>Boréal</option>";
 	drop += "<option value='camb'>Cambrian</option>";
+	drop += "<option value='cana'>Canadore</option>";
 	drop += "<option value='cent'>Centennial</option>";
 	drop += "<option value='cone'>Conestoga</option>";
 	drop += "<option value='conf'>Confederation</option>";
@@ -51,18 +52,17 @@ $J(document).ready(function(){
 	drop += "<option value='flem'>Fleming</option>";
 	drop += "<option value='geob'>George Brown</option>";
 	drop += "<option value='geog'>Georgian</option>";
-	drop += "<option value='fans'>Fanshawe</option>";
 	drop += "<option value='humb'>Humber</option>";
-	/*drop += "<option value='laci'>La Cité</option>";*/
+	drop += "<option value='laci'>La Cité</option>";
 	drop += "<option value='lamb'>Lambton</option>";
 	drop += "<option value='loya'>Loyalist</option>";
 	drop += "<option value='moha'>Mohawk</option>";
 	drop += "<option value='niag'>Niagara</option>";
 	drop += "<option value='nort'>Northern</option>";
-	/*drop += "<option value='saul'>Sault</option>";*/
+	drop += "<option value='saul'>Sault</option>";
 	drop += "<option value='sene'>Seneca</option>";
 	drop += "<option value='sher'>Sheridan</option>";
-	/*drop += "<option value='stcl'>St. Clair</option>";*/
+	drop += "<option value='stcl'>St. Clair</option>";
 	drop += "<option value='stla'>St. Lawrence</option>";
 	drop += "</select>";
 

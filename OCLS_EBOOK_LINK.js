@@ -1,9 +1,10 @@
 function getEbookLink(rId){
-	// The 'targetCollege' global variable is set by the OCLS_COLLEGE_DROPDOWN widget
+	// The 'targetCollege' global variable is set by the college-menu.js script (loaded in custom/web).
 	// Map this value to full college name as in the 856 entries
 	collegeNameMappings = { "algo": "Algonquin College", 
 						"bore": "Collège Boréal", 
-						"camb": "Cambrian College", 
+						"camb": "Cambrian College",
+						"cana": "Canadore College",
 						"cent": "Centennial College",
 						"cone": "Conestoga College",
 						"conf": "Confederation College",
@@ -13,13 +14,16 @@ function getEbookLink(rId){
 						"geob": "George Brown College",
 						"geog": "Georgian College",
 						"humb": "Humber College",
+						"laci": "La Cité Collégiale",
 						"lamb": "Lambton College",
 						"loya": "Loyalist College",
 						"moha": "Mohawk College",
 						"niag": "Niagara College",
 						"nort": "Northern College",
+						"saul": "Sault College",
 						"sene": "Seneca College",
 						"sher": "Sheridan College",
+						"stcl": "St. Clair College",
 						"stla": "St. Lawrence College"
 						};
 	try{
@@ -72,7 +76,7 @@ function getEbookLink(rId){
 }
 
 function get856Links(rId,targetCollegeName){
-	var wsBaseUrl="http://bibc.ocls.ca:8080/symws/";
+	var wsBaseUrl="https://bibc.ocls.ca:8443/symws/";
 	var clientId="DS_CLIENT";
 
 	all_results=jQuery('#results_wrapper').find('.DOC_ID_value');
@@ -119,6 +123,14 @@ function parse856Links(sirsijson,targetCollegeName){
 			return false;
 		}
 	});
-	console.log("Ebook URL: "+ebookUrl);
-	window.open(ebookUrl);
+	
+	// Check if a value was found. If not, no 856 was defined for this college.
+	if (ebookUrl) {
+		console.log("Resource URL: "+ebookUrl);
+		window.open(ebookUrl);
+	} else {
+		console.log("No resource URL found for college "+targetCollegeName);
+		
+		alert("${NOACCESS} "+targetCollegeName);
+	}
 }
